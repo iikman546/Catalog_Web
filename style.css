@@ -1,0 +1,210 @@
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    margin:0;
+    background-color: rgb(236, 249, 252);
+}
+
+
+.redline {
+    border-bottom: 10px solid red;
+    margin: 10px 0;
+}
+
+.header1 {
+    text-align: center;
+    color: white;
+    border: 2px solid violet;
+    padding: 20px;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.5);
+    font-family: broadway-regular, sans-serif;
+        background-image: url('Images/palmtree-2.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        background-attachment: fixed;
+    transition: none;
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.para1 {
+    color: white;
+    padding: 70px;
+    line-height: 1.6;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.5);
+    font-family: broadway-regular, sans-serif;
+    background-image: url('Images/Palm-Tree_Banner.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.button_position_center {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.button_position_left {
+    text-align: left;
+    margin-top: 20px;
+}
+
+.menu_button {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.button1 {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: rgb(0, 221, 255);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.button1:hover {
+    background-color: darkblue;
+    transform: scale(1.2);
+}
+
+.return_button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: blue;
+    color: white;
+
+    margin-top:10px;
+    margin-bottom: 5px;
+    margin-left: 2px;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: 0.3s;
+
+
+}
+.return_button:hover {
+    background-color: darkblue;
+    transform: scale(1.2);
+}
+
+.button_image_menu {
+    display: grid;
+    width: 70px;
+    height: 70px;
+    gap: 20px;
+    cursor: pointer;
+    object-fit: cover;
+
+
+    transition: transform 0.3s ease;
+   
+}
+
+.button_image_menu:hover {
+    transform: scale(1.1);
+}
+
+.icon-image {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.icon_container{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 220px;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.image_button {
+    width: 100%;
+    display: block;
+    border-radius: 10px;
+}
+
+/* kode untuk katalog */
+.bagian-katalog {
+    margin: 40px 25px;
+}
+
+.bagian-katalog h2 {
+    margin-bottom: 8px;
+}
+
+.bagian-katalog > p {
+    margin-bottom: 25px;
+    color: #666;
+}
+
+/* Susunan kartu katalog */
+.catalog-container {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+}
+
+/* Kartu setiap produk */
+.catalog-card {
+    display: block;
+    padding: 12px;
+    color: #222;
+    text-decoration: none;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+/* Foto produk */
+.foto-katalog img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    display: block;
+    border-radius: 7px;
+}
+
+/* Efek hover hanya pada kartu katalog */
+.foto-katalog:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+}
+
+.foto-katalog h3 {
+    margin: 12px 0 6px;
+}
+
+.foto-katalog p {
+    margin: 0;
+    color: #666;
+    font-size: 14px;
+}
+
+/* Tampilan untuk layar lebih kecil */
+@media (max-width: 900px) {
+    .catalog-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .catalog-container {
+        grid-template-columns: 1fr;
+    }
+}
